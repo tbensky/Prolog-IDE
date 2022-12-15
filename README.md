@@ -40,3 +40,4 @@ Currently, your code is saved to a file called `file.pl` in the same location as
 
 * Work on syntax highlighting in codemirror.
 * Some kind of Save and file system
+* Using a browser's `LocalStorage` might work for saving files. At least for my work, my Prolog files tend to be short. `LocalStorage` seems to have a ~5 MB limit, which will work.
