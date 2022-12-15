@@ -8,7 +8,8 @@ suddenly dawned on me that I working on Prolog using the macOS CLI. I was litera
 So, I decided on 
 
 
-[[sample.png|Sample of Prolog, showing editor, output, and error windows]]
+![Sample of Prolog, showing editor, output, and error windows](https://github.com/tbensky/Prolog-IDE/blob/main/sample.png)
+[[sample.png|]]
 
 
  Found winbox
