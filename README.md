@@ -31,7 +31,7 @@ When run, you have to put an explicit goal in your code, so SWI Prolog knows wha
 % goal: <goal-name>
 ```
 
-where ``goal-name`` is the Prolog goal you'd like to execute. The `% goal: ` is a target string the Python web-server looks for, before sending your code out to SWI Prolog.
+where ``<goal-name>`` is the Prolog goal you'd like to execute. The `% goal: ` is a target string the Python web-server looks for, before sending your code out to SWI Prolog.
 
 
 # To do
