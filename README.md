@@ -33,7 +33,10 @@ When run, you have to put an explicit goal in your code, so SWI Prolog knows wha
 
 where ``<goal-name>`` is the Prolog goal you'd like to execute. The `% goal: ` is a target string the Python web-server looks for, before sending your code out to SWI Prolog.
 
+Currently, your code is saved to a file called `file.pl` in the same location as the files above.
+
 
 # To do
 
 * Work on syntax highlighting in codemirror.
+* Some kind of Save and file system
