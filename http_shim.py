@@ -62,7 +62,7 @@ class MyServer(BaseHTTPRequestHandler):
                 prolog_goal = goal[1].rstrip(".").strip();
 
         if prolog_goal == "":
-            send_back = json.dumps({"output": "","error": "Missing % goal: line in code."})
+            send_back = json.dumps({"output": "","error": "ERROR: Missing % goal: line in code."})
         else:
             code_to_run = f"['file.pl']. {prolog_goal}."
 

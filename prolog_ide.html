@@ -54,30 +54,57 @@
 
       
          var node = document.getElementById("output");
-         var winbox = new WinBox("Output");
-         winbox.mount(node);
+         var output_window = new WinBox(
+                                    {
+                                       title: "Output",
+                                       width: 600,
+                                       height: 500,
+                                       
+                                    });
+         output_window.mount(node);
 
          var node = document.getElementById("error");
-         var winbox = new WinBox("Errors");
-         winbox.mount(node);
+         var error_window = new WinBox(
+                                    {
+                                       title: "Errors",
+                                        width: 600,
+                                        height: 200,
+                                      
+
+                                       });
+         error_window.mount(node);
 
 
          var node = document.getElementById("code");
-         var winbox = new WinBox(
+         var editor_window = new WinBox(
                                     {
                                        title: "Editor",
+                                       width: 600,
+                                       height: 500,
+                                     
                                         onresize: function(w, h){
-                                                                  console.log(`${w}, ${h}`);
                                                                   editor.setSize(w,h);
                                                           },
                                     });
-         winbox.mount(node);
+         editor_window.mount(node);
 
          
          //editor.setSize(500, 300);
          editor.setValue('write("hello").')
          $("#code").css("background","#303030");
 
+         console.log($(window).width());
+         output_window.x = $(window).width()/2;
+         output_window.y = 10;
+         output_window.move();
+
+         error_window.x = 10;
+         error_window.y = $(window).height() - 300;
+         error_window.move();
+
+         editor_window.x = 10;
+         editor_window.y = 10;
+         editor_window.move();
    });
 
 
@@ -115,7 +142,7 @@
                         {
                            
                            console.log(index,item);
-                           if (item.indexOf("ERROR:") != -1)
+                           if (item.indexOf("ERROR:") != -1 || item.indexOf("WARNING:") != -1)
                               errors = errors + item + "<br/>";
                         });
          $("#error").html(errors);
