@@ -22,3 +22,7 @@ Pretty simple, but it works Ok and has taken me away from the low-level edit-ter
 * `http_shim.py` is the http shim that allows the browser to interface to SWI Prolog.  When running, you can start up the IDE by typing `http://localhost:8080` in your web-browsers. Apache is not needed.
 
 * `prolog_ide.html` is the html file for the IDE. Do not load this using File->Open on your browser as it will not work. `http_shim.py` will read this and send it to your browser via the http request.
+
+# To do
+
+* Work on syntax highlighting in codemirror.
